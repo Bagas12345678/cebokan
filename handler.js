@@ -275,7 +275,7 @@ module.exports = {
                     if (!isNumber(user.lastadventure)) user.lastadventure = 0
                 } else global.db.data.users[m.sender] = {
                     exp: 0,
-                    limit: 1000,
+                    limit: 30,
                     joinlimit: 1,
                     spammer: 0,
                     money: 10000,
@@ -534,19 +534,19 @@ module.exports = {
                     if (!isNumber(chat.expired)) chat.expired = 0
                 } else global.db.data.chats[m.chat] = {
                     isBanned: false,
-                    welcome: false,
-                    detect: false,
+                    welcome: true,
+                    detect: true,
                     sWelcome: '',
                     sBye: '',
                     sPromote: '',
                     sDemote: '',
                     delete: true,
-                    antiLink: false,
+                    antiLink: true,
                     stiker: false,
                     antiSticker: false,
-                    viewonce: false,
-                    useDocument: false,
-                    antiToxic: false,
+                    viewonce: true,
+                    useDocument: true,
+                    antiToxic: true,
                     expired: 0,
                 }
             } catch (e) {
